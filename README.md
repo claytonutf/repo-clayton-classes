@@ -1,6 +1,6 @@
 # REPOSITÓRIO PROF CLAYTON K. #
 
-* Repositório de códigos-fonte apresentados durante as aulas práticas de disciplinas de programação.
+* Repositório de códigos-fonte apresentados durante as aulas práticas das disciplinas de programação.
 
 
 # Contexto #
