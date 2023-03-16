@@ -1,0 +1,87 @@
+<!--
+    HTML input types: https://www.w3schools.com/html/html_form_input_types.asp
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exemplo de formulário</title>
+  </head>
+  <body>
+    <form action="/signup" method="post">
+        <p>
+          <label>Pronome</label><br>
+          <label>
+            <input type="radio" name="title" value="mr">
+            Sr.
+          </label>
+          <label>
+            <input type="radio" name="title" value="mrs">
+            Sra.
+          </label>
+          <label>
+            <input type="radio" name="title" value="miss">
+            Outro
+          </label>
+        </p>
+        <p>
+          <label for="first_name">Primeiro nome</label><br>
+          <input type="text" name="first_name" id="first_name">
+        </p>
+        <p>
+          <label>Sobrenome</label><br>
+          <input type="text" name="last_name">
+        </p>
+        <p>
+            <label>Data de nascimento</label><br>
+            <input type="date" name="date">
+        </p>
+        <p>
+          <label>Email</label><br>
+          <input type="email" name="email" required placeholder="email@domain.com">
+        </p>
+        <p>
+          <label>Telefone</label><br>
+          <input type="tel" name="phone">
+        </p>
+        <p>
+          <label>Senha</label><br>
+          <input type="password" name="password">
+        </p>
+        <p>
+            <label>Tempo de experiência</label><br>
+            <input type="range" name="experience" min="0" max="12" step="2">
+          </p>
+        <p>
+            <label>Cor preferida</label><br>
+            <input type="color" name="color">
+        </p>
+            <p>
+                <label>Imagem do seu avatar</label><br>
+                <input type="file" name="file">
+            <p>
+        <p>
+          <label>Estado</label><br>
+          <select>
+            <option>SC</option>
+            <option>PR</option>
+            <option>RS</option>
+            <option selected>SP</option>
+            <option>Outro</option>
+          </select>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" value="terms">
+            Eu concordo com os <a href="/terms">termos e condições</a>
+          </label>
+        </p>
+        <p>
+          <button>Cadastrar</button>
+          <button type="reset">Resetar formulário</button>
+        </p>
+      </form>
+  </body>
+</html>
