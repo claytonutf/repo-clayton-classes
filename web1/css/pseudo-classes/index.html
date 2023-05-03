@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes</title>
+    <style>
+        /*******/
+        /* exemplo mesmo link com estilizações diferentes */
+        /* link não visitado */
+        a:link {
+        color: #FF0000;
+        }
+
+        /* link visitado */
+        a:visited {
+        color: #00FF00;
+        }
+
+        /* mouse sobre o link */
+        a:hover {
+        color: #FF00FF;
+        }
+
+        /* link selecionado (clique e segura) */
+        a:active {
+        color: yellow;
+        }
+
+        /*******/
+        /* exemplo hover */
+        p {
+        display: none;
+        background-color: hsl(125, 84%, 38%); /*tipos de cores: https://blog.betrybe.com/css/css-color/*/
+        padding: 20px;
+        }
+
+        div:hover p {
+        display: block;
+        }
+
+        /*******/
+        /* exemplo first child */
+        span:first-child {
+        color: magenta;
+        } 
+
+        textarea:focus {
+        background: #663399; /*história desta cor: https://www.codigofonte.com.br/noticias/conheca-a-tocante-historia-de-rebeccapurple-a-menina-que-virou-cor-de-css */
+        }
+
+        /*******/
+        /* exemplo fullscreen */
+        /* https://tympanus.net/codrops/css_reference/fullscreen/ */
+        .container {
+        margin: 4px auto;
+        max-width: 500px;
+        }
+
+        .element {
+        padding: 20px;
+        height: 300px;
+        width: 100%;
+        background-color: skyblue;
+        }
+
+        .element h2 {
+        visibility: hidden;
+        text-align: center;
+        color: white;
+        font-size: 3em;
+        }
+
+        .element:fullscreen {
+        background-color: #e4708a;
+        width: 100vw;
+        height: 100vh;
+        }
+
+        .element:fullscreen h2 {
+        visibility: visible;
+        }
+
+        /*******/
+        /* exemplo nth-child básico*/
+        h6:nth-child(4) {
+        background: red;
+        }
+        /* exemplo nth-child com a fórmula (an + b)*/
+        h6:nth-child(3n+0) {
+        background: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <div>Estilizando um link de acordo com o estado</div>
+    <a href="https://www.pr.senac.br/faculdade/ponta-grossa/8/tecnologia-em-analise-e-desenvolvimento-de-sistemas/6" target="_blank">Tecnologia em Análise e Desenvolvimento de Sistemas</a> -->
+
+    <br><br><br>
+
+    <!-- <div>Hover sobre este elemento div para mostrar um elemento 'P' descendente
+        <p>Elemento P aqui!</p>
+    </div> -->
+
+    <br><br><br>
+
+    <!-- <div>:first-child estiliza um elemento especificado que seja primeiro descendente de outro elemento.
+        <span style="display: block;">Texto span descendente 1</span>
+        <span style="display: block;">Texto span descendente 2</span>
+    </div> -->
+
+    <br><br><br>
+
+    <!-- <div>:focus é usado para estilizar um elemento que está atualmente selecionado pelo teclado ou ativado pelo mouse.</div>
+    <textarea name="textao" id="textao" cols="30" rows="5"></textarea> -->
+
+    <br><br><br>
+
+    <!-- <div>:fullscreen seleciona e estiliza um elemento que está sendo apresentado em modo tela cheia</div>
+    <h2>Clique no botão abaixo para o elemento entrar em modo tela cheia</h2>
+    <div class="container">   
+    <div class="element" id="element">
+        <h2>Estou em modo tela cheia!</h2>
+        </div>
+        <br>
+        <button onclick="var el = document.getElementById('element'); el.webkitRequestFullscreen();">Vai para tela cheia!</button>
+    </div> -->
+
+    <br><br><br>
+
+    <!-- <div>:nth-child(n) seleciona e estiliza todo elemento que é o descendente enésimo de um seletor.
+        <ul>
+            <li>Primeiro elemento da lista</li>
+            <li>Segundo elemento da lista</li>
+            <li>Terceiro elemento da lista</li>
+            <li>Quarto elemento da lista</li>
+            <li>Quinto elemento da lista</li>
+          </ul>
+    </div> -->
+
+    <br><br><br>
+
+    <!-- <div>Exemplo nth-child usando a fórmula (an + b) onde: a representa um tamanho de ciclo, n é um contador (começa em 0) e b é um valor de deslocamento. Aqui, especificamos uma cor de fundo para todos os elementos div cujo índice é um múltiplo de 3 (selecionará o terceiro, sexto, nono, etc)
+    <h6>O primeiro h6</h6>
+    <h6>O segundo h6</h6>
+    <h6>O terceiro h6</h6>
+    <h6>O quarto h6</h6>
+    <h6>O quinto h6</h6>
+    <h6>O sexto h6</h6>
+    <h6>O sétimo h6</h6>
+    <h6>O oitavo h6</h6>
+    <h6>O nono h6</h6>
+    </div> -->
+    
+</body>
+</html>

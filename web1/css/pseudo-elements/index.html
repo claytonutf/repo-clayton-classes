@@ -1,0 +1,165 @@
+<!-- 
+    referência mor:
+    https://www.w3schools.com/css/css_pseudo_elements.asp 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo elementos</title>
+    <style>
+        p::first-line {
+        color: #ff0000;
+        font-variant: small-caps;
+        }
+
+        h1::first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+        }
+
+        h2::first-letter {
+        /* ver mais: https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter */
+        color: #ff0000;
+        font-size: xx-large;
+        }
+
+        h2::first-line {
+        /* ver mais: https://developer.mozilla.org/en-US/docs/Web/CSS/::first-line */
+        color: #0000ff;
+        font-variant: small-caps;
+        }
+
+        h3::before {
+        /* ver mais: https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
+        content: url(images/img1.png);
+        /* width: 10px; */
+        }
+
+        h4 {
+        background-color: #5bc8f7;
+        }
+
+        h4::after {
+        /* https://developer.mozilla.org/en-US/docs/Web/CSS/::after */
+        content: "Olhe esta caixa laranja!";
+        background-color: #ffba10;
+        border-color: black;
+        border-style: dotted;
+        }
+
+        ::marker { 
+        /* ver mais: https://developer.mozilla.org/en-US/docs/Web/CSS/::marker */
+        color: red;
+        font-size: 23px;
+        }
+
+        ::selection {
+        /* ver mais: https://developer.mozilla.org/en-US/docs/Web/CSS/::selection */
+        color: red;
+        background: yellow;
+        }
+
+        input::file-selector-button {
+            font-weight: bold;
+            color: dodgerblue;
+            padding: 0.5em;
+            border: thin solid grey;
+            border-radius: 3px;
+        }
+
+        ::grammar-error { 
+        /* curiosidade: https://developer.mozilla.org/en-US/docs/Web/CSS/::grammar-error */
+        text-decoration: underline red;
+        color: red;
+        }
+
+        div{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <p>::first-line adiciona efeito na primeira linha de um texto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, a! Id numquam et aperiam, nulla sequi molestias veritatis dicta expedita delectus eligendi, eius modi nobis dolor deserunt. Repudiandae, id doloremque?</p> -->
+
+    <!-- 
+    As seguintes propriedades aplicam ::first-line a um elemento:
+    font properties
+    color properties
+    background properties
+    word-spacing
+    letter-spacing
+    text-decoration
+    vertical-align
+    text-transform
+    line-height
+    clear 
+    -->
+
+    <br><br><br>
+
+    <!-- <h1>::first-letter adiciona efeito especial ao primeiro caractere de um texto, a chamada letra capitular. </h1> -->
+
+    <!--     
+    As seguintes propriedades aplicam first-letter a um elemento:
+    font properties
+    color properties 
+    background properties
+    margin properties
+    padding properties
+    border properties
+    text-decoration
+    vertical-align (only if "float" is "none")
+    text-transform
+    line-height
+    float
+    clear
+     -->
+
+    <br><br><br>
+
+    <!-- <h2>É possível combinar ::first-letter e ::first-line para adicionar efeito especial à primeira letra e à primeira linha de um texto!</h2> -->
+
+    <br><br><br>
+
+    <!-- <h3>::before insere um conteúdo antes do conteúdo do elemento.</h3> -->
+
+    <!--
+        
+    Exemplos para treinar: https://developer.mozilla.org/en-US/docs/Web/CSS/::before
+    -->
+
+    <br><br><br>
+
+    <!-- <h4>::after insere um texto após o conteúdo do elemento</h4> -->
+
+    <br><br><br>
+
+    <!-- <div>::marker customiza os marcadores conforme segue:</div>
+    <ul>
+        <li>Café</li>
+        <li>Chá</li>
+        <li>Leite</li>
+      </ul>
+      
+      <ol>
+        <li>Primeiro</li>
+        <li>Segundo</li>
+        <li>Terceiro</li>
+      </ol> -->
+
+    <!-- <div>::selection aplica um estilo quando um texto é selecionado</div> -->
+
+    <br><br><br>
+
+    <!-- <div>input::file-selector-button customiza o botão de upload de arquivos</div>
+
+    <input type="file" name="avatar" accept="image/png, image/jpeg">
+  -->
+</body>
+</html>
