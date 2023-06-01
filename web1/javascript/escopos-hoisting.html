@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript escopo global/local e hoisting</title>
+</head>
+<body>
+</html>
+
+<html>
+<body>
+
+<script>
+
+/***************************************/
+/* exemplo 1 */
+// const myObj = {firsname:"John", lastname:"Doe"}; // definição de um objeto com dois atributos
+// console.log(myObj);
+
+
+/***************************************/
+/* exemplo 2 */
+// var tester = "Olá!"; // variável declarada fora de uma função tem escopo global
+// function newFunction() {
+//     var hello = "Hello!"; //variável declarada dentro de uma função tem escolo local
+// }
+// console.log(hello); // erro: Uncaught ReferenceError: hello is not defined
+
+
+/***************************************/
+/* exemplo 3 */
+/* 
+    Hoisting é um mecanismo do JavaScript que faz com que as declarações de variáveis (var) e de funções sejam movidas para o topo de seu escopo antes da execução do código. 
+    Desse modo, variáveis de var sofrem o hoisting e vão para o topo do escopo, sendo inicializadas com um valor de undefined.
+*/
+// caso 1
+//console.log (greeter); // undefined
+//var greeter = "say hello" 
+
+// caso 2
+//console.log (greeter); // Uncaught ReferenceError: Cannot access 'greeter' before initialization
+//let greeter = "say hello" 
+
+
+/***************************************/
+/* exemplo 4 */
+
+// caso 1 (var) - Hoisting! Xabu! Evite var!
+//let greeting = "say Hi";
+//let times = 4;
+//
+//if (times > 3) {
+//    var hello = "say Hello instead";
+//    console.log(hello);// say Hello instead
+//}
+//console.log(hello) // say Hello instead
+
+// caso 2 (let) - Comportamento decente como a maioria das linguagens de programação (ex: C, C++, Java, C#, ...). let pode ser atualizado, mas não declarado novamente.
+//let greeting = "say Hi";
+//let times = 4;
+//
+//if (times > 3) {
+//    let hello = "say Hello instead";
+//    console.log(hello);// say Hello instead
+//}
+//console.log(hello) // Uncaught ReferenceError: hello is not defined
+
+console.log(window.document.location.href);
+
+</script>
+
+</body>
+</html>
+
+<!--
+    https://www.freecodecamp.org/portuguese/news/var-let-e-const-qual-e-a-diferenca
+    https://www.freecodecamp.org/news/javascript-let-and-const-hoisting/
+-->
