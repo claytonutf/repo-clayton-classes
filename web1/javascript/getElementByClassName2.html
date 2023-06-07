@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        display:flex;
+        }
+
+        div {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        }
+
+        .box {
+        width:50px;
+        height:50px;
+        background:yellow;
+        margin:10px;
+        }
+
+        .circle {
+        width:60px;
+        height:60px;
+        background:yellow;
+        border-radius:50%;
+        margin:10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">box 1</div>
+    <div class="box">box 2</div>
+    <div class="box">box 3</div>
+    <div class="box">box 4</div>
+    <div class="box">box 5</div>
+    <div class="circle">circle 1</div>
+
+    <script>
+        // const boxes = document.getElementsByClassName("box");
+        // console.log(boxes); // HTMLCollection
+        // for(box of boxes) {
+        // box.style.border = "4px solid black"; // Apply border to boxes only
+        // }
+    </script>
+
+</body>
+</html>
+<!--
+    O método getElementsByClassName() recebe um argumento que é o valor do atributo de classe.
+    Neste caso "box".
+    A string no argumento do método getElementsByClassName() deve corresponder ao valor do atributo de classe especificado na marcação HTML.
+
+    https://softauthor.com/javascript-get-elements-by-class-name/#get-element-by-class-name-using-getelementsbyclassname
+-->
