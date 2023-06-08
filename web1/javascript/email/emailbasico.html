@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio de email simples</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+  </script>
+</head>
+<body>
+  
+  <script>
+    /*
+    Exemplo envio de email com EMAILJS
+    Siga o Tutorial para criar conta site https://www.emailjs.com/
+    https://plainenglish.io/blog/send-emails-from-your-website-with-emailjs-6b220eea86e4
+    Substitua as strings <Public Key>, <service_id>, <template_id> com as suas credenciais
+    */
+    (function() {
+      emailjs.init("<Public Key>"); //https://dashboard.emailjs.com/admin/account/general
+    })();
+  //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+  // atenção para o nome destes campos, deverão corresponder no template {{to_name}} {{from_name}} {{message}}
+    var templateParams = {
+      to_name: 'emaildestinatario@gmail.com',
+      from_name: 'Nome remetente',
+      message: 'Mensagem a ser enviada'
+    };
+
+    // serviceID https://dashboard.emailjs.com/admin
+    // templateID https://dashboard.emailjs.com/admin/templates
+    emailjs.send('<service_id>', '<template_id>', templateParams)
+      .then(function(response) {
+        console.log('SUCESSO!', response.status, response.text);
+      }, function(error) {
+        console.log('FALHOU...', error);
+      });
+  </script>
+</body>
+</html>
+
+<!--
+  Prof. Clayton K.
+  Faculdade SENAC PG @ 2023.1
+  https://stackoverflow.com/questions/58791656/send-email-directly-from-javascript-using-emailjs
+-->
